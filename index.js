@@ -20,6 +20,7 @@ server.get("/:level", (req, res) => {
   }
   const randIdx = Math.floor(Math.random() * questions.length);
   return res.json({
+    qCount: questions.length,
     q: questions[randIdx],
   });
 });
